@@ -3,10 +3,15 @@
     "description": "A generate file in custom directory for Greenland iMES",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Dung Nguyen Trung",
+            "email": "trungdungnguyen199@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
-        "dung-nguyentrung/mes-cmd": "dev-master"
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0"
     },
     "repositories": [
         {

@@ -84,7 +84,7 @@ class MakeRepositoryCommand extends Command
      */
     protected function getRepoStub()
     {
-        return File::get(app_path('Common/Stubs/repo.stub'));
+        return File::get(__DIR__ . '/../Stubs/repo.stub');
     }
 
     /**

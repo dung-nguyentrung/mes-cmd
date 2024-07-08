@@ -60,6 +60,6 @@ class MakeViewModelCommand extends Command
      */
     protected function getVMStub()
     {
-        return File::get(app_path('Common/Stubs/view-model.stub'));
+        return File::get(__DIR__ . '/../Stubs/view-model.stub');
     }
 }

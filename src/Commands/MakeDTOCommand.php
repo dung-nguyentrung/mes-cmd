@@ -60,6 +60,6 @@ class MakeDTOCommand extends Command
      */
     protected function getDTOStub()
     {
-        return File::get(app_path('Common/Stubs/dto.stub'));
+        return File::get(__DIR__ . '/../Stubs/dto.stub');
     }
 }

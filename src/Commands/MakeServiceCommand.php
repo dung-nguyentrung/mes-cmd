@@ -84,7 +84,7 @@ class MakeServiceCommand extends Command
      */
     protected function getServiceStub()
     {
-        return File::get(app_path('Common/Stubs/service.stub'));
+        return File::get(__DIR__ . '/../Stubs/service.stub');
     }
 
     /**
@@ -94,6 +94,6 @@ class MakeServiceCommand extends Command
      */
     protected function getInterfaceStub()
     {
-        return File::get(app_path('Common/Stubs/interface.stub'));
+        return File::get(__DIR__ . '/../Stubs/interface.stub');
     }
 }

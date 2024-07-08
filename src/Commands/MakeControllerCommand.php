@@ -58,6 +58,6 @@ class MakeControllerCommand extends Command
      */
     protected function getControllerStub()
     {
-        return File::get(app_path('Common/Stubs/controller.stub'));
+        return File::get(__DIR__ . '/../Stubs/controller.stub');
     }
 }

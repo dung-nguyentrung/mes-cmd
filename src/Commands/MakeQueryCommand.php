@@ -72,7 +72,7 @@ class MakeQueryCommand extends Command
      */
     protected function getQueryBuilderStub()
     {
-        return File::get(app_path('Common/Stubs/query.stub'));
+        return File::get(__DIR__ . '/../Stubs/query.stub');
     }
 
     /**

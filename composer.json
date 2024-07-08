@@ -4,8 +4,15 @@
     "type": "library",
     "require": {
         "php": ">=7.4",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0"
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
+        "harry/mes-cmd": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dung-nguyentrung/mes-cmd.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Harry\\MesCmd\\": "src/"

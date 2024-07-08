@@ -1,8 +1,8 @@
 <?php
 
-namespace Harry\MesCmd;
+namespace DungNguyenTrung\MesCmd;
 
-use Harry\MesCmd\Commands\{
+use DungNguyenTrung\MesCmd\Commands\{
     MakeControllerCommand,
     MakeDTOCommand,
     MakeModelCommand,

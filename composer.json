@@ -1,27 +1,27 @@
 {
-    "name": "harry/mes-cmd",
+    "name": "dung-nguyentrung/mes-cmd",
     "description": "A generate file in custom directory for Greenland iMES",
     "type": "library",
     "require": {
         "php": ">=7.4",
         "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
-        "harry/mes-cmd": "dev-master"
+        "dung-nguyentrung/mes-cmd": "dev-master"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/dung-nguyentrung/mes-cmd.git"
+            "url": "https://github.com/dung-nguyentrung/mes-cmd"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Harry\\MesCmd\\": "src/"
+            "DungNguyenTrung\\MesCmd\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Harry\\MesCmd\\ServiceProvider"
+                "DungNguyenTrung\\MesCmd\\ServiceProvider"
             ]
         }
     },

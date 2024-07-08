@@ -1,6 +1,6 @@
 <?php
 
-namespace Harry\MesCmd\Commands;
+namespace DungNguyenTrung\MesCmd\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;

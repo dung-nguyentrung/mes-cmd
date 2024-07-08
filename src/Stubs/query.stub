@@ -1,0 +1,19 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Database\Eloquent\Builder;
+
+class {{class}} extends Builder
+{
+    /**
+     * Sample function for Query Builder
+     *
+     * @return self
+     * @author Harry
+     */
+    public function whereActive(): self
+    {
+        return \$this->where('isactive', 'Y');
+    }
+}

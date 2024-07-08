@@ -1,0 +1,18 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Contracts\View\View;
+
+class {{className}}
+{
+    /**
+     * index
+     *
+     * @return View
+     */
+    public function index(): View
+    {
+        // Write code here
+    }
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Modules\{{folder}}\Interfaces\{{class}}Interface;
+
+class {{class}} implements {{class}}Interface
+{
+    // Repo methods here
+}

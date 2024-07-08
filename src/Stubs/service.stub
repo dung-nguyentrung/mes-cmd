@@ -1,0 +1,11 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Common\Services\BaseService;
+use App\Modules\{{folder}}\Interfaces\{{class}}Interface;
+
+class {{class}} extends BaseService implements {{class}}Interface
+{
+    // Service methods here
+}

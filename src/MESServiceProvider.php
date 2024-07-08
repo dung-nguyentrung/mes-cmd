@@ -14,7 +14,7 @@ use DungNguyenTrung\MesCmd\Commands\{
 };
 use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends ServiceProvider
+class MESServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

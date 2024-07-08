@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DungNguyenTrung\\MesCmd\\ServiceProvider"
+                "DungNguyenTrung\\MesCmd\\MESServiceProvider"
             ]
         }
     },

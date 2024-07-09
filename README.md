@@ -34,6 +34,7 @@
 ```
 
 ## Description
+
 This package includes some custom collectors:
 
 - Create a new controller
@@ -52,3 +53,69 @@ Require this package with composer. It is recommended to only require the packag
 ```shell
 composer require dung-nguyentrung/mes-cmd:dev-master --dev
 ```
+
+## Usage
+
+### Make Controller
+
+```shell
+php artisan mes:controller ControllerName Folder
+```
+
+<span style="color: green;">
+Controller created successfully at yourPath/app\Modules/{Folder}/Controllers/{ControllerName}.php
+</span>
+
+### Make Model
+
+```shell
+php artisan mes:model ModelName Folder
+```
+
+<span style="color: green;">
+Model created successfully at yourPath/app\Modules/{Folder}/Models/{ModelName}.php
+</span>
+
+### Make Query Builder
+
+- Basic
+
+```shell
+php artisan mes:query QueryBuilderName Folder
+```
+
+- Add --model Tag
+
+```shell
+php artisan mes:query QueryBuilderName Folder --model=YourModel
+```
+
+`YourModel.php`
+
+```php
+<?php
+
+...
+use App\Modules/{Folder}/QueryBuilders/{QueryBuilderName};
+
+class Manufacture extends BaseModel
+{
+    use HasFactory;
+
+    /**
+     * newEloquentBuilder
+     *
+     * @param  $query
+     * @return QueryBuilderName
+     */
+    public function newEloquentBuilder($query): QueryBuilderName
+    {
+        return new QueryBuilderName($query);
+    }
+}
+
+```
+
+<span style="color: green;">
+QueryBuilder created successfully at yourPath/app\Modules/{Folder}/QueryBuilders/{QueryBuilderName}.php
+</span>

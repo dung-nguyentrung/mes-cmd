@@ -16,5 +16,5 @@ This package includes some custom collectors:
 Require this package with composer. It is recommended to only require the package for development.
 
 ```shell
-composer require dung-nguyentrung/mes-cmd --dev
+composer require dung-nguyentrung/mes-cmd:dev-master --dev
 ```

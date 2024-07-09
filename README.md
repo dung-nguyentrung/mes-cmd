@@ -98,9 +98,11 @@ php artisan mes:query QueryBuilderName Folder --model=YourModel
 ...
 use App\Modules/{Folder}/QueryBuilders/{QueryBuilderName};
 
-class Manufacture extends BaseModel
+class YourModel extends BaseModel
 {
     use HasFactory;
+
+    ...
 
     /**
      * newEloquentBuilder

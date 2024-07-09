@@ -1,5 +1,39 @@
 ## Generate file for Greenland Project
 
+## Folder Structure
+
+```
+├── app
+│   └── Common
+│       ├── Constants
+│       ├── Controllers
+│       └── Helpers
+│       └── Interfaces
+│       └── Middleware
+│       └── Models
+│       └── Repositories
+│       └── Services
+│       └── Traits
+│   └── Modules
+│       ├── Auth
+│           ├── Controllers
+│           ├── DataTransferObjects
+│           ├── Exceptions
+│           ├── Interfaces
+│           ├── Models
+│           ├── QueryBuilders
+│           ├── Requests
+│           ├── Routes
+│           ├── Rules
+│           ├── Services
+│           ├── Exports
+│           ├── Imports
+│           ├── Jobs
+│       ├── ...
+├── ...
+```
+
+## Description
 This package includes some custom collectors:
 
 - Create a new controller

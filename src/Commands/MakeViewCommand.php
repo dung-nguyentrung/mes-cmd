@@ -2,6 +2,7 @@
 
 namespace DungNguyenTrung\MesCmd\Commands;
 
+use DungNguyenTrung\MesCmd\Constants\Shell;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 
@@ -12,7 +13,7 @@ class MakeViewCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'mes:view {name} {folder}';
+    protected $signature = Shell::VIEW;
 
     /**
      * The console command description.

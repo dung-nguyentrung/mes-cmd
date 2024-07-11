@@ -2,6 +2,7 @@
 
 namespace DungNguyenTrung\MesCmd\Commands;
 
+use DungNguyenTrung\MesCmd\Constants\Shell;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ class MakeQueryCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'mes:query {name} {folder} {--model=}';
+    protected $signature = Shell::QUERY;
 
     /**
      * The console command description.
@@ -59,10 +60,7 @@ class MakeQueryCommand extends Command
         File::put($destinationPath, $stub);
         $this->info("QueryBuilder created successfully at {$destinationPath}");
 
-        // Append to model if --model option is provided
-        if ($model) {
-            $this->appendToModel($model, $namespace, $className, $folder);
-        }
+       
     }
 
     /**
@@ -73,56 +71,5 @@ class MakeQueryCommand extends Command
     protected function getQueryBuilderStub()
     {
         return File::get(__DIR__ . '/../Stubs/query.stub');
-    }
-
-    /**
-     * Append newEloquentBuilder method to the specified model.
-     *
-     * @param string $model
-     * @param string $namespace
-     * @param string $className
-     */
-    protected function appendToModel($model, $namespace, $className, $folder)
-    {
-        $modelPath = app_path("Modules/{$folder}/Models/{$model}.php");
-
-        if (!file_exists($modelPath)) {
-            $this->error("Model {$model} does not exist!");
-            return;
-        }
-
-        $modelContent = File::get($modelPath);
-        $newEloquentBuilderMethod =  $this->getNewEloquentQueryStub($className);
-
-        $useStatement = "use {$namespace}\\{$className};\n";
-        if (!Str::contains($modelContent, $useStatement)) {
-            $modelContent = preg_replace('/namespace\s+[^\s;]+;\s*/', "$0\n{$useStatement}", $modelContent, 1);
-        }
-
-        $modelContent = preg_replace('/}\s*$/', $newEloquentBuilderMethod . '}', $modelContent);
-        File::put($modelPath, $modelContent);
-
-        $this->info("newEloquentBuilder method appended to model {$model}");
-    }
-
-    /**
-     * getNewEloquentQueryStub
-     *
-     */
-    protected function getNewEloquentQueryStub(string $className)
-    {
-        return <<<EOT
-            /**
-             * newEloquentBuilder
-             *
-             * @param  \Illuminate\Database\Query\Builder \$query
-             * @return {$className}
-             */
-            public function newEloquentBuilder(\$query): {$className}
-            {
-                return new {$className}(\$query);
-            }
-
-        EOT;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace DungNguyenTrung\MesCmd\Commands;
 
+use DungNguyenTrung\MesCmd\Constants\Shell;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 
@@ -12,7 +13,7 @@ class MakeModelCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'mes:model {name} {folder}';
+    protected $signature = Shell::MODEL;
 
     /**
      * The console command description.

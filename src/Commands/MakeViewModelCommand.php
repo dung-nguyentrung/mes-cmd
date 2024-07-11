@@ -2,6 +2,7 @@
 
 namespace DungNguyenTrung\MesCmd\Commands;
 
+use DungNguyenTrung\MesCmd\Constants\Shell;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ class MakeViewModelCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'mes:vm {name} {folder} {--model=}';
+    protected $signature = Shell::VIEW_MODEL;
 
     /**
      * The console command description.

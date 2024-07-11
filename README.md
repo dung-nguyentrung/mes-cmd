@@ -121,3 +121,49 @@ class YourModel extends BaseModel
 <span style="color: green;">
 QueryBuilder created successfully at yourPath/app\Modules/{Folder}/QueryBuilders/{QueryBuilderName}.php
 </span>
+
+### Make View
+
+```shell
+php artisan mes:view view-name Folder
+```
+
+<span style="color: green;">
+View created successfully at yourPath/app\Modules/{Folder}/View/{view-name}.blade.php
+</span>
+
+### Make View Model
+
+```shell
+php artisan mes:vm ViewModelName Folder
+```
+
+<span style="color: green;">
+View Model created successfully at yourPath/app\Modules/{Folder}/ViewModels/{ViewModelName}.php
+</span>
+
+### Make Service
+
+```shell
+php artisan mes:service ServiceName Folder
+```
+
+<span style="color: green;">
+Service created successfully at yourPath/app\Modules/{Folder}/Services/{ServiceName}.php
+</span>
+<span style="color: green;">
+{ServiceName}Interface created successfully at yourPath/app\Modules/{Folder}/Interfaces/{ServiceName}Interface.php
+</span>
+
+### Make Repository
+
+```shell
+php artisan mes:repo RepositoryName Folder
+```
+
+<span style="color: green;">
+View created successfully at yourPath/app\Modules/{Folder}/Repositories/{RepositoryName}.php
+</span>
+<span style="color: green;">
+{RepositoryName}Interface created successfully at yourPath/app\Modules/{Folder}/Interfaces/{RepositoryName}Interface.php
+</span>

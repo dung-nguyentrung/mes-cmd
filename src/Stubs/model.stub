@@ -1,0 +1,27 @@
+<?php
+
+namespace {{namespace}};
+
+use App\Common\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class {{className}} extends BaseModel
+{
+    use HasFactory;
+
+    /** @var $connection */
+    protected $connection = '';
+
+    /** @var $table */
+    protected $table = '';
+
+    /**
+     * @var $fillable
+     */
+    protected $fillable = [];
+
+    /**
+     * @var $hidden
+     */
+    protected $hidden = [];
+}

@@ -4,7 +4,7 @@ namespace {{namespace}};
 
 use Illuminate\Database\Eloquent\Builder;
 
-class {{class}} extends Builder
+class {{className}} extends Builder
 {
     public function __construct()
     {

@@ -3,6 +3,8 @@
 namespace DungNguyenTrung\MesCmd\Traits;
 
 use DungNguyenTrung\MesCmd\Constants\Folder;
+use DungNguyenTrung\MesCmd\Constants\Stub;
+use Illuminate\Support\Facades\File;
 
 trait MStub
 {

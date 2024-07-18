@@ -2,9 +2,9 @@
 
 namespace {{namespace}};
 
-use App\Modules\{{folder}}\Interfaces\{{class}}Interface;
+use App\Modules\{{folder}}\Interfaces\{{className}}Interface;
 
-class {{class}} implements {{class}}Interface
+class {{className}} implements {{className}}Interface
 {
     // Repo methods here
 }

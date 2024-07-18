@@ -2,12 +2,10 @@
 
 namespace DungNguyenTrung\MesCmd\Commands;
 
+use DungNguyenTrung\MesCmd\Constants\Folder;
 use DungNguyenTrung\MesCmd\Constants\Shell;
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
-class MakeDTOCommand extends Command
+class MakeDTOCommand extends Maker
 {
     /**
      * The name and signature of the console command.
@@ -21,46 +19,11 @@ class MakeDTOCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Create a new data transfer object in a custom directory';
+    protected $description = 'Create a new dto in a custom directory';
 
-    /**
-     * Execute the console command.
-     */
-    public function handle()
+    public function __construct()
     {
-        $name = $this->argument('name');
-        $folder = $this->argument('folder');
-        $model = $this->option('model');
-        $namespace = "App\\Modules\\{$folder}\\DataTransferObjects";
-        $destinationPath = app_path("Modules/{$folder}/DataTransferObjects/{$name}.php");
-
-        $directory = dirname($destinationPath);
-        if (!File::isDirectory($directory)) {
-            File::makeDirectory($directory, 0755, true);
-        }
-
-        if (file_exists($destinationPath)) {
-            $this->error("{$name} DTO already exists!");
-            return;
-        }
-
-        $className = Str::studly($name);
-
-        $stub = $this->getDTOStub();
-        $stub = str_replace('{{namespace}}', $namespace, $stub);
-        $stub = str_replace('{{class}}', $className, $stub);
-
-        File::put($destinationPath, $stub);
-        $this->info("DTO created successfully at {$destinationPath}");
-    }
-
-    /**
-     * Get the data transfer object stub file content.
-     *
-     * @return string
-     */
-    protected function getDTOStub()
-    {
-        return File::get(__DIR__ . '/../Stubs/dto.stub');
+        $folder = config('mes-cmd.folder.dto') ?? Folder::DTO;
+        parent::__construct($folder, false);
     }
 }

@@ -3,14 +3,13 @@
 namespace DungNguyenTrung\MesCmd\Commands;
 
 use DungNguyenTrung\MesCmd\Constants\Folder;
-use DungNguyenTrung\MesCmd\Constants\Stub;
 use DungNguyenTrung\MesCmd\Traits\MDirectory;
 use DungNguyenTrung\MesCmd\Traits\MStub;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-class MakeControllerCommand extends Command
+class Maker extends Command
 {
     use MDirectory, MStub;
 
@@ -30,7 +29,7 @@ class MakeControllerCommand extends Command
      */
     public function handle(): void
     {
-        $rootFolder = config('mes-cmd.folder.root');
+        $rootFolder = config('mes-cmd.folder.root') ?? Folder::ROOT;
         $name = $this->argument('name');
         $folder = $this->argument('folder');
         $model = $this->option('model');

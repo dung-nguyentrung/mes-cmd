@@ -3,9 +3,9 @@
 namespace {{namespace}};
 
 use App\Common\Services\BaseService;
-use App\Modules\{{folder}}\Interfaces\{{class}}Interface;
+use App\Modules\{{folder}}\Interfaces\{{className}}Interface;
 
-class {{class}} extends BaseService implements {{class}}Interface
+class {{className}} extends BaseService implements {{className}}Interface
 {
     // Service methods here
 }

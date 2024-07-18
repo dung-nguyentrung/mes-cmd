@@ -4,7 +4,7 @@ namespace {{namespace}};
 
 use App\Common\Services\BaseServiceInterface;
 
-interface {{class}}Interface extends BaseServiceInterface
+interface {{className}}Interface extends BaseServiceInterface
 {
     // Service interface methods here
 }

@@ -2,7 +2,9 @@
 
 namespace DungNguyenTrung\MesCmd\Traits;
 
+use DungNguyenTrung\MesCmd\Constants\Folder;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 /**
  * MDirectory class: Check directory is exists and generate it.
@@ -34,7 +36,7 @@ trait MDirectory
 
     protected function buildFileName(string $name): string
     {
-        return $this->folder === 'Views' ? "{$name}.blade.php" : "{$name}.php";
+        return "{$name}.php";
     }
 
     protected function ensureDirectoryExists(string $path): void
@@ -53,8 +55,9 @@ trait MDirectory
 
     protected function invalidFileName(string $name): bool
     {
-        if (!Str::endsWith($name, "{$this->folder}")) {
-            $this->error("{$name} must end with '{$this->folder}'!");
+        $folder = Str::singular($this->folder);
+        if (!Str::endsWith($name, "{$folder}")) {
+            $this->error("{$name} must end with '{$folder}'!");
             return true;
         }
         return false;

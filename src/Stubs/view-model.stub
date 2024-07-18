@@ -4,6 +4,6 @@ namespace {{namespace}};
 
 use App\Common\ViewModels\BaseViewModel;
 
-class {{class}} extends BaseViewModel
+class {{className}} extends BaseViewModel
 {
 }

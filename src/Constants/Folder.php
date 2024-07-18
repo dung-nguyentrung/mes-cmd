@@ -12,4 +12,5 @@ final class Folder
     const REPO = 'Repositories';
     const VIEW = 'Views';
     const VIEW_MODEL = 'ViewModels';
+    const MODEL = 'Models';
 }

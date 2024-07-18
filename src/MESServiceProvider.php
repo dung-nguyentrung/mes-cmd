@@ -24,7 +24,7 @@ class MESServiceProvider extends ServiceProvider
     public function register()
     {
         $this->publishes([
-            __DIR__ . '/../config/mes-cmd.php' => config_path('mes-cmd.php'),
+            __DIR__ . '/config/mes-cmd.php' => config_path('mes-cmd.php'),
         ], 'config');
         $this->commands([
             MakeControllerCommand::class,

@@ -12,7 +12,7 @@ class MakeControllerCommand extends Maker
      *
      * @var string
      */
-    protected $signature = Shell::DTO;
+    protected $signature = Shell::CONTROLLER;
 
     /**
      * The console command description.

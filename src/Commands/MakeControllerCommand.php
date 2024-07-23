@@ -5,7 +5,7 @@ namespace DungNguyenTrung\MesCmd\Commands;
 use DungNguyenTrung\MesCmd\Constants\Folder;
 use DungNguyenTrung\MesCmd\Constants\Shell;
 
-class MakeDTOCommand extends Maker
+class MakeControllerCommand extends Maker
 {
     /**
      * The name and signature of the console command.
@@ -23,7 +23,7 @@ class MakeDTOCommand extends Maker
 
     public function __construct()
     {
-        $folder = config('mes-cmd.folder.dto') ?? Folder::DTO;
+        $folder = config('mes-cmd.folder.controller') ?? Folder::CONTROLLER;
         parent::__construct($folder, false);
     }
 }

@@ -83,7 +83,7 @@ class Maker extends Command
         }
 
         $stubInterface = $this->getInterfaceStub();
-        $stubInterface = str_replace(['{{namespace}}', '{{class}}'], [$namespaceInterface, $className], $stubInterface);
+        $stubInterface = str_replace(['{{namespace}}', '{{className}}'], [$namespaceInterface, $className], $stubInterface);
 
         File::put($interfacePath, $stubInterface);
     }
